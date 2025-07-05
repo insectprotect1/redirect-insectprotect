@@ -1,22 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from "react";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const IndexPage = () => {
+  useEffect(() => {
+    window.location.replace("https://www.insectprotect.de");
+  }, []);
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site running on App Platform!</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+  return (
+    <html lang="de">
+      <head>
+        <meta httpEquiv="refresh" content="0; url=https://www.insectprotect.de" />
+        <title>Weiterleitung...</title>
+      </head>
+      <body>
+        <p>Sie werden weitergeleitet nach <a href="https://www.insectprotect.de">www.insectprotect.de</a></p>
+      </body>
+    </html>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
+
